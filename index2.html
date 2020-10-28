@@ -75,7 +75,49 @@
 			</div>
 		</section>
 		
+		<!-- review Start -->
+		<section class="review-bg">
+			<div class="container">
+				<div class="review-section">
+					<div class="title">
+						<i class="fa fa-heart fa-3x"></i>
+						<h2> Our customers <br>love us!</h2>
+						<a href="" class="btn-custom"> Read More Reviews</a> 
+					</div>
+					<div class="reviews">
+						<ul>
+							<li>
+								<p> “Nullam <span>ante ligula commodo sedvelit</span> velcursus rutum mielsue habitantes morbi tique sens acturpis <span>esteu iaculis aliamnean ultrices</span> telluset aliqulputateros turpis”</p>
+								<div class="user">
+									<div class="user-img">
+										<img src="assets/images/user.png" alt="">
+									</div>
+									<div class="user-info">
+										<h3> Ronda Hill</h3>
+										<span> www.dummysite.com</span>
+										<div class="stars">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+									</div>
+								</div>
+							</li>														
+						</ul>
+						<div class="controls">
+							<a href="#" class="rev_prev"> <i class="fa fa-angle-left"></i>  </a>
+							<a href="#" class="rev_next"> <i class="fa fa-angle-right"></i> </a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
 		
+		
+		<!-- Footer Start -->
 		<footer>
 			<div class="footer-top">
 				<div class="container">
@@ -86,10 +128,40 @@
 							<button type="submit"> Subscribe now</button>
 						</form>	
 					</div>
+					
+					<div class="footer-details">
+						<div class="service-info">
+							<h3> Services</h3>
+							<ul>
+								<li><a href="">Web Hosting</a></li>
+								<li><a href="">Cloud Hosting</a></li>
+								<li><a href="">Shared Hosting</a></li>
+								<li><a href="">Wordpress Hosting</a></li>
+							</ul>
+						</div>
+						<div class="service-info">
+							<h3> Quick Links</h3>
+							<ul>
+								<li><a href="">Homepage
+								<li><a href="">Services</a></li>
+								<li><a href="">About us</a></li>
+								<li><a href="">Contact us</a></li>
+							</ul>
+						</div>
+						<div class="service-info">
+							<h3> Recent Post</h3>
+							<p> Web Hosting Website Template <span> 20 February,2020  /  By Admin</span></p>
+							<p> Wordpress Hosting Website <span> 19 February,2020  /  By Admin</span></p>
+						</div>
+						<div class="service-info">
+							<h3> About</h3>
+							<p> Nullam ante ligula commd is dvelit velcursus rutum miesue habitantes morbi tristique one senectus enetusetada.</p>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-		
-		
+			
 			<div class="footer-bottom">
 				<div class="container">
 					<div class="social-link">
@@ -101,12 +173,14 @@
 						</ul>
 					</div>
 					<div class="copyright">
-						<p> &copy; 2020 WEHOST  All right reserved. &nbsp;  | &nbsp; Developed by kamal </p>
+						<p> &copy; 2020 WEHOST  All right reserved. &nbsp;  | &nbsp; Template developed by Kamal </p>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<!-- footer End -->
 		
+		<!-- script Start -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function () {
@@ -143,7 +217,41 @@
 				$('a.control_next').click(function () {
 					moveRight();
 				});
-			});    
+			}); 
+			
+			$(document).ready(function () {
+				var reviewCount = $('.reviews ul li').length;
+				var reviewWidth = $('.reviews ul li').width();
+				var reviewHeight = $('.reviews ul li').height();
+				var reviewUlWidth = reviewCount * reviewWidth;
+				
+				$('.reviews ul li:last-child').prependTo('.reviews ul');
+				
+				function revLeft() {
+					$('.reviews ul').animate({
+						left: + slideWidth
+					}, 200, function () {
+						$('.reviews ul li:last-child').prependTo('.reviews ul');
+						$('.reviews ul').css('left', '');
+					});
+				};
+
+				function revRight() {
+					$('.reviews ul').animate({
+						left: - slideWidth
+					}, 200, function () {
+						$('.reviews ul li:first-child').appendTo('.reviews ul');
+						$('.reviews ul').css('left', '');
+					});
+				};
+				$('a.rev_prev').click(function () {
+					revLeft();
+				});
+
+				$('a.rev_next').click(function () {
+					revRight();
+				});
+			});
 		</script>
 	</body>	
 	</html>

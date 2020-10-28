@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,700&display=swap');
+/* font-family */
 
 * {
 	padding: 0;
@@ -15,8 +16,21 @@ body {
 }
 .container {
     position: relative;
-	margin: 0px 100px;
+    margin: 0 15rem;
+    padding: 0;
 }
+a{
+	text-decoration: none;
+	text-transform: none;
+}
+ul {
+	padding:0;
+	margin: 0;
+	list-style: none;
+}
+
+
+/* header Start */
 header {
     position: absolute;
     min-width: 100%;
@@ -45,12 +59,11 @@ header a {
     color: white;
     text-decoration: none;
     text-transform: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
  header .logo {
     float: left;
-    margin-left: 100px;
-    line-height: 50px; 
+    line-height: 50px;
 }
 header .logo h1 {
     color: white;
@@ -61,7 +74,7 @@ header .logo h1 {
 header .top-right,
 header #navbar {
     float: right;
-    margin-right: 150px; 
+    margin: 0;
 }
 header .top-right li {
     list-style: none;
@@ -92,7 +105,9 @@ header #navbar li {
     display: inline-block;
     line-height: 50px; 
 }
+/* header END */
 
+/* Slider Start */
 #slider {
 	position: relative;
 	overflow: hidden;
@@ -187,6 +202,8 @@ a.control_next {
 	border-radius: 5px;
 	padding: 12px 25px;
 }
+/* Slider End */
+
 .display {
 	position: relative;
 	display: block;
@@ -195,6 +212,159 @@ a.control_next {
 	position: relative;
 	display: block;
 }
+
+/* review start */
+.review-bg {
+	background: #1346b7;
+}
+.review-section {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+    align-items: self-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+	width: 100%;
+	padding: 75px 0px;
+	margin: 0 auto;
+}
+.review-section .title{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	padding: 0;
+	min-width: 400px;
+	height: 350px;
+}
+.review-section .title i{
+	background: linear-gradient(90deg, rgba(245,67,67,1) 50%, rgba(191,29,29,1) 50%);
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	margin-bottom: 20px;
+}
+.review-section .title h2 {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 0.8px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.review-section .title .btn-custom {
+    outline: none;
+    border: 1px solid #4fe8cc;
+    background: #4fe8cc;
+    padding: 15px 20px;
+    width: 175px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: normal;
+    cursor: pointer;
+    transition: 0.5s a11;
+    text-align: center;
+}
+.review-section .reviews{
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	background: #fff;
+	padding: 35px 30px;
+	border-radius: 6px;
+}
+.review-section .reviews p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Noto Serif', serif;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.review-section .reviews p span{
+	font-weight: 700;
+}
+.review-section .reviews p:before {
+    content: "\f10d";
+    font-size: 30px;
+    font-family: 'FontAwesome';
+    font-style: italic;
+    color: #4fe8cc;
+    margin-right: 20px;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+.reviews .user{
+	position: relative;
+	width: 100%;
+}
+.reviews .user-img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+.reviews .user img {
+    width: 100%;
+	height: auto;
+}
+.reviews .user-info {
+	display: inline-block;
+	float: left;
+	text-align: left;
+	margin-left: 20px;
+}
+.reviews .user-info h3 {
+	font-size: 18px;
+	font-weight: 600;
+}
+.reviews .user-info span {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    color: gray;
+    letter-spacing: 0.5px;
+}
+.reviews .user-info .stars {
+    color: #ffc502;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+}
+.review-section .reviews .controls {
+    position: relative;
+    bottom: -75px;
+    text-align: center;
+}
+.review-section .reviews .controls a {
+    font-size: 28px;
+    color: #fff;
+    width: 28px;
+    padding: 7px;
+    cursor: pointer;
+}
+.review-section .reviews ul {
+	overflow: hidden;
+	list-style: none;
+}
+.review-section .reviews ul li {
+    position: relative;
+    display: in;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+/* review end */
+
 
 /* footer start */
 footer {
@@ -213,9 +383,21 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0px;
+    padding: 35px 0px;
 }
-
+.suscribe-form:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-bottom: 1px solid #403f3f;
+}
+.suscribe-form h3{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
 .suscribe-form input {
     outline: none;
     border: 1px solid #403f3f;
@@ -228,6 +410,12 @@ footer {
     background: #292929;
 	border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+	color: #fff;
+}
+::-webkit-input-placeholder ,
+:-ms-input-placeholder,
+::placeholder {
+  color: #aeaeae;
 }
 .suscribe-form button {
     outline: none;
@@ -245,6 +433,52 @@ footer {
     letter-spacing: normal;
     cursor: pointer;
     transition: 0.5s a11;
+}
+.footer-details {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+}
+.footer-details .service-info {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 250px;
+}
+.footer-details .service-info h3{
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	color: #fff;
+	padding: 15px 0px;
+	margin: 0;
+}
+.footer-details .service-info ul li{
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	margin-bottom: 10px;	
+}
+.footer-details .service-info p{
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+.footer-details .service-info p span{
+	display: block;
+	font-size: 12px;
+	line-height: 22px;
+}
+.footer-details .service-info p,
+.footer-details .service-info p span,
+.footer-details .service-info a{
+	color: #757575;
 }
 
 .footer-bottom {
@@ -274,12 +508,14 @@ footer {
 	cursor: pointer;
 }
 .social-link a{
-	color: #bfbfbf;
+	color: #9d9d9d;
 	text-decoration: none;
 	text-transform: none;
 }
 .copyright p{
 	font-size: 14px;
 	line-height: 50px;
-	color: #bfbfbf;
+	color: #9d9d9d;
 }
+
+/* footer end */
