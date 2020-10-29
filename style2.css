@@ -213,6 +213,98 @@ a.control_next {
 	display: block;
 }
 
+
+
+/* hosting start */
+	.section-padding {
+		padding-top: 75px;		
+		padding-bottom: 75px;		
+	}
+	.hosting {
+		position: relative;
+		background: linear-gradient(rgb(70 70 70 / 60%), rgb(0 0 0 / 60%)), url(../images/hosting.jpg);
+		background-repeat: no-repeat;
+		background-size: inherit;
+		background-position: center;
+		height: 400px;
+		width: 100%;
+		z-index: 0;
+	}
+	.hosting .title {
+		position: absolute;
+		padding: 50px;
+		color: #fff;
+		width: 650px;
+	}
+	.hosting .title i{
+		margin-bottom: 30px;
+	}
+	.hosting .title h2{
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 36px;
+		letter-spacing: 0.8px;
+		margin-bottom: 25px;
+	}
+	.hosting .title p{
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: normal;
+		margin-bottom: 30px;
+	}
+	.hosting .title .btn-custom{
+	    outline: none;
+		border: 1px solid #4fe8cc;
+		background: #4fe8cc;
+		padding: 15px 20px;
+		width: 175px;
+		border-radius: 5px;
+		font-size: 12px;
+		color: #000;
+		font-weight: 600;
+		letter-spacing: normal;
+		cursor: pointer;
+		transition: 0.5s a11;
+		text-align: center;
+	}
+	.hosting-list {
+		position: relative;
+		width: 100%;
+		height: 150px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+	.hosting-list .hosting-info {
+		border: 1px solid #d0d0d0;
+		background: #fff;
+		width: 100%;
+		padding: 25px 25px;
+	}
+	.hosting-info .imgbox {
+		width: 50px;
+		height: 50px;
+		float: left;
+	}
+	.hosting-info .text {
+		display: inline-block;
+		padding: 0px 25px;
+	}
+	.hosting-info .text h3{
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 26px;
+	}
+	.hosting-info .text p {
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.5px;
+		line-height: 26px;
+		color: gray;
+	}
+/* hosting End */
+
 /* review start */
 .review-bg {
 	background: #1346b7;
@@ -364,6 +456,7 @@ a.control_next {
     text-align: left;
 }
 /* review end */
+
 
 
 /* footer start */
